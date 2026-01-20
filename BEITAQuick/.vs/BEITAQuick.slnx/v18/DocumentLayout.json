@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "R:\\BEITAQuick\\BEITAQuick\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BEITAQuick||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1158664D-E5CB-4476-86F9-4A1AC7DF40BA}|BEITAQuick\\BEITAQuick.csproj|r:\\beitaquick\\beitaquick\\beitaquick\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1158664D-E5CB-4476-86F9-4A1AC7DF40BA}|BEITAQuick\\BEITAQuick.csproj|solutionrelative:beitaquick\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1158664D-E5CB-4476-86F9-4A1AC7DF40BA}|BEITAQuick\\BEITAQuick.csproj|R:\\BEITAQuick\\BEITAQuick\\beitaquick\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1158664D-E5CB-4476-86F9-4A1AC7DF40BA}|BEITAQuick\\BEITAQuick.csproj|solutionrelative:beitaquick\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1158664D-E5CB-4476-86F9-4A1AC7DF40BA}|BEITAQuick\\BEITAQuick.csproj|r:\\beitaquick\\beitaquick\\beitaquick\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BEITAQuick",
+              "DocumentMoniker": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\BEITAQuick.csproj",
+              "RelativeDocumentMoniker": "BEITAQuick\\BEITAQuick.csproj",
+              "ToolTip": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\BEITAQuick.csproj",
+              "RelativeToolTip": "BEITAQuick\\BEITAQuick.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-20T15:35:01.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BEITAQuick\\MainWindow.xaml",
+              "ToolTip": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\MainWindow.xaml",
+              "RelativeToolTip": "BEITAQuick\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T15:25:26.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BEITAQuick\\MainWindow.xaml.cs",
+              "ToolTip": "R:\\BEITAQuick\\BEITAQuick\\BEITAQuick\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BEITAQuick\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:02:01.681Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

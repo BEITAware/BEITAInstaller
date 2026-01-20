@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BEITAQuick.exe" version="1.0.0.0" publicKeyToken="af9703fa8166214d" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BEITAQuick" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BEITAQuick.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 清单选项
+          如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换
+          requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+          如果要利用文件和注册表虚拟化提供
+          向后兼容性，请删除 requestedExecutionLevel 节点。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BEITAQuick.exe" size="1978816">
+      <assemblyIdentity name="BEITAQuick" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>eZonGzLNJyb7qPWQFY6qyQqa+Aj/jh3k2r7pXlKTXX4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BEITAQuick.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=IZHUZZY-PC\25465" issuerKeyHash="aa37dce07a962d0a1a6be620bcabfb88e31006d6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>w2aqGz3ABs9u6MYAhH4QCPH871Kg3DAiVtrE1FkFDz0=</DigestValue></Reference></SignedInfo><SignatureValue>B5DBuExRKpQ97zn5t4WAwOLru+8I56VdwWmovISO7gDGLCjsTAb+kFRAfU4+L973ujX2UIVJ2lHzfJ77ik8xh3dOj2VlKp2FyAjdIvAmnzIXLd2peaRvwnZy3LfnzYJhbzVUwUutCRQ7ELmHFnG14FKB4EMSAiTeV0G9WND9lsM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tJs6+/rCMXH4S3+pSW3lGm7vbNwNd/Cx24c+TmvFKlkCDUJPAjmcNpxMhiXPU7tHF3XdF6k2CjxSTsTdMfw6O2JzEfQRIuEbyYkWvI9gh7++zqCl7Cgl09rS3x9hiN3cvebmDhJAY1kU98MCKEhNUTvXn+xI5UUhAR4w5WNAvw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3d0f0559d4c4da562230dca052effcf108107e8400c6e86ecf06c03d1baa66c3" Description="" Url=""><as:assemblyIdentity name="BEITAQuick.exe" version="1.0.0.0" publicKeyToken="af9703fa8166214d" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=IZHUZZY-PC\25465</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>abZbH0/DLrAW2KN61U4N8ie51gJYc8XDDhLlxOHvbUY=</DigestValue></Reference></SignedInfo><SignatureValue>F3tANP6p1y+CV1Xeb7nZ/oFl2V6vpM8y0k0uMNIX+LpTqLfnQvYGdKpYLeqewQO8R0TyHgsYX2LAM1hao9ZTynBmdgmqP2RyJfY1TRlBRG4D5Atugi/RRgVt7eduYhNG/kpLuB7KV0uXphWkHXacmDPDsAyVoJ8iL/Jidu3jRXo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tJs6+/rCMXH4S3+pSW3lGm7vbNwNd/Cx24c+TmvFKlkCDUJPAjmcNpxMhiXPU7tHF3XdF6k2CjxSTsTdMfw6O2JzEfQRIuEbyYkWvI9gh7++zqCl7Cgl09rS3x9hiN3cvebmDhJAY1kU98MCKEhNUTvXn+xI5UUhAR4w5WNAvw0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQFLyft+GJirdEf1YaS08eEDANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAASQBaAEgAVQBaAFoAWQAtAFAAQwBcADIANQA0ADYANTAeFw0yNjAxMjAxNTMzMzZaFw0yNzAxMjAyMTMzMzZaMCsxKTAnBgNVBAMeIABJAFoASABVAFoAWgBZAC0AUABDAFwAMgA1ADQANgA1MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0mzr7+sIxcfhLf6lJbeUabu9s3A138LHbhz5Oa8UqWQINQk8COZw2nEyGJc9Tu0cXdd0XqTYKPFJOxN0x/Do7YnMR9BEi4RvJiRa8j2CHv77OoKXsKCXT2tLfH2GI3dy95uYOEkBjWRT3wwIoSE1RO9ef7EjlRSEBHjDlY0C/DQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAIc+iDrcfC/WZMcDZm1nQMQXMk7GXOuifGxYBZ2KpMNVISbilgqMPbYdqkkxJJzFpL7LPBiT2Uu9gKIU2j0QoJhPvTEY3xXJfqc0RncnnxfkQ7Ejrl5/bI+gz2xHBUsAFdTR/mxYMjtsmavoRQ6bwiBgR0hFZYh4l6R5hj1moN1e</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
