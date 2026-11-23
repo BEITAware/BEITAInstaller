@@ -11,6 +11,13 @@ namespace BEITAQuick.Services
         public void Install(InstallConfig config)
         {
             int totalItems = config.ContentItems.Count;
+            if (totalItems == 0)
+                throw new InvalidDataException("安装包中没有可安装的组件。");
+            foreach (var item in config.ContentItems)
+            {
+                if (string.IsNullOrWhiteSpace(item.TargetPath))
+                    throw new InvalidDataException("请选择组件的安装位置: " + item.Name);
+            }
             int currentItem = 0;
 
             foreach (var item in config.ContentItems)
