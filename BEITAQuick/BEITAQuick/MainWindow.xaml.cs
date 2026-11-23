@@ -13,17 +13,21 @@ namespace BEITAQuick
         private int currentStep = 0;
         private InstallConfig config;
         private InstallService installService;
-        private System.Collections.Generic.Dictionary<string, TextBox> pathTextBoxes = new System.Collections.Generic.Dictionary<string, TextBox>();
+        private readonly System.Collections.Generic.Dictionary<ContentItem, TextBox> pathTextBoxes = new System.Collections.Generic.Dictionary<ContentItem, TextBox>();
 
         public MainWindow()
         {
             InitializeComponent();
-            LoadConfiguration();
+            if (!LoadConfiguration())
+            {
+                NextButton.IsEnabled = false;
+                return;
+            }
             BuildPathConfigUI();
             UpdateUI();
         }
 
-        private void LoadConfiguration()
+        private bool LoadConfiguration()
         {
             try
             {
@@ -44,10 +48,12 @@ namespace BEITAQuick
                 {
                     LicenseText.Text = File.ReadAllText(config.LicensePath);
                 }
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"加载配置失败: {ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
         }
 
@@ -91,7 +97,7 @@ namespace BEITAQuick
                 var browseButton = new Button
                 {
                     Style = (Style)FindResource("BrowseButtonStyle"),
-                    Tag = item.Name
+                    Tag = item
                 };
                 browseButton.Click += BrowseButton_Click;
                 Grid.SetColumn(browseButton, 1);
@@ -113,12 +119,19 @@ namespace BEITAQuick
                 PathConfigPanel.Children.Add(itemPanel);
 
                 // 保存文本框引用
-                pathTextBoxes[item.Name] = textBox;
+                pathTextBoxes[item] = textBox;
 
                 // 监听文本框变化以更新信息文本
                 textBox.TextChanged += (s, e) =>
                 {
-                    infoText.Text = $"将安装到: {Path.Combine(textBox.Text, item.Name)}";
+                    try
+                    {
+                        infoText.Text = $"将安装到: {Path.Combine(textBox.Text, item.Name)}";
+                    }
+                    catch (ArgumentException)
+                    {
+                        infoText.Text = "请输入有效的安装路径。";
+                    }
                 };
             }
         }
@@ -126,22 +139,17 @@ namespace BEITAQuick
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
-            var itemName = button.Tag as string;
+            var item = (ContentItem)button.Tag;
 
-            var dialog = new System.Windows.Forms.FolderBrowserDialog
+            using (var dialog = new System.Windows.Forms.FolderBrowserDialog
             {
-                Description = $"选择 {itemName} 的安装位置",
-                ShowNewFolderButton = true
-            };
-
-            if (pathTextBoxes.ContainsKey(itemName))
+                Description = $"选择 {item.Name} 的安装位置",
+                ShowNewFolderButton = true,
+                SelectedPath = pathTextBoxes[item].Text
+            })
             {
-                dialog.SelectedPath = pathTextBoxes[itemName].Text;
-            }
-
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                pathTextBoxes[itemName].Text = dialog.SelectedPath;
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    pathTextBoxes[item].Text = dialog.SelectedPath;
             }
         }
 
@@ -154,6 +162,8 @@ namespace BEITAQuick
             CompletePage.Visibility = currentStep == 4 ? Visibility.Visible : Visibility.Collapsed;
 
             BackButton.Visibility = currentStep > 0 && currentStep < 3 ? Visibility.Visible : Visibility.Collapsed;
+            NextButton.Visibility = currentStep == 3 ? Visibility.Collapsed : Visibility.Visible;
+            CancelButton.IsEnabled = currentStep != 3;
 
             if (currentStep == 0)
             {
@@ -172,13 +182,11 @@ namespace BEITAQuick
             }
             else if (currentStep == 3)
             {
-                NextButton.Visibility = Visibility.Collapsed;
-                CancelButton.IsEnabled = false;
+                InstallProgress.Value = 0;
             }
             else if (currentStep == 4)
             {
                 NextButton.Content = "完成";
-                NextButton.Visibility = Visibility.Visible;
                 NextButton.IsEnabled = true;
                 CancelButton.Visibility = Visibility.Collapsed;
             }
@@ -209,12 +217,10 @@ namespace BEITAQuick
                 // 更新配置中的目标路径
                 foreach (var item in config.ContentItems)
                 {
-                    if (pathTextBoxes.ContainsKey(item.Name))
-                    {
-                        item.TargetPath = pathTextBoxes[item.Name].Text;
-                    }
+                    item.TargetPath = pathTextBoxes[item].Text;
                 }
                 currentStep = 3;
+                UpdateUI();
                 await StartInstallation();
             }
             else if (currentStep == 4)
